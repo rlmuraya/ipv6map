@@ -1,0 +1,10 @@
+*~
+*.bak
+*.py[cod]
+*.*sw[pod]
+
+/.coverage
+/ipv6map/settings/local.py
+
+/htmlcov/
+/public/
