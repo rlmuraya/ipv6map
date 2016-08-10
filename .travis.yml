@@ -1,0 +1,31 @@
+language: python
+
+sudo: false
+
+python:
+  - "3.5"
+
+addons:
+  postgresql: "9.4"
+
+cache:
+  directories:
+    - "$HOME/.cache/pip"
+    - "$HOME/.cache/venvs"
+
+env:
+  - DJANGO_SETTINGS_MODULE="ipv6map.settings.test"
+
+install:
+  - pip install -U pip
+  - pip install -U -r requirements.txt
+
+before_script:
+  - createdb -E UTF-8 ipv6map -U postgres -O $USER
+
+script:
+  - pipconflictchecker
+  - python manage.py makemigrations --dry-run --check
+  - coverage run manage.py test
+  - coverage report
+  - flake8 .
