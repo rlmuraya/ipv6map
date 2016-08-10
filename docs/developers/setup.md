@@ -37,13 +37,14 @@ may be needed for Mac setup.
 
         add2virtualenv .
 
-6. Configure the default project settings file within your virtual environment,
-   and restart the environment so that the change will take effect:
+6. This project uses `django-dotenv` to manage environment variables.
+   Add an environment variable to the ``.env`` file in the project root to set
+   where Django should look for your project settings:
 
-        echo "export DJANGO_SETTINGS_MODULE=ipv6map.settings.local" >> $VIRTUAL_ENV/bin/postactivate
-        echo "unset DJANGO_SETTINGS_MODULE" >> $VIRTUAL_ENV/bin/postdeactivate
-        deactivate
-        workon ipv6map
+        echo "DJANGO_SETTINGS_MODULE=ipv6map.settings.local" >> .env
+
+   The ``.env`` file is listed in the ``.gitignore`` file and should never be
+   checked into GitHub.
 
 7. Create a MySQL database::
 

@@ -4,6 +4,7 @@
 *.*sw[pod]
 
 /.coverage
+/.env
 /ipv6map/settings/local.py
 
 /geodata/

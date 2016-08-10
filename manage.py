@@ -2,6 +2,11 @@
 import os
 import sys
 
+from ipv6map import load_env
+
+
+load_env.load_env()
+
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ipv6map.settings.local")
