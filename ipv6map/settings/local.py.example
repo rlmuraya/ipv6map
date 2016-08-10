@@ -1,0 +1,20 @@
+import sys
+
+
+if 'test' in sys.argv:
+    from .test import *  # noqa
+
+else:
+    from .dev import *  # noqa
+
+    # Uncomment to run without using debug mode, e.g., to check the 404 and
+    # 500 pages. You will need to use `python manage.py runserver --insecure`
+    # in order for static files to be served.
+    # DEBUG = False
+    # ALLOWED_HOSTS = ['.localhost']
+
+    # django-debug-toolbar
+    # INSTALLED_APPS.append('debug_toolbar')  # noqa
+
+    # django-template-debug
+    # INSTALLED_APPS.append('template_debug')  # noqa
