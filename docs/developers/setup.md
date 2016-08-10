@@ -8,7 +8,7 @@ may be needed for Mac setup.
 1. Ensure that you have the following installed on your system:
 
     * Python 3.5
-    * Postgres
+    * MySQL
     * pip
     * virtualenv
     * virtualenvwrapper
@@ -45,9 +45,9 @@ may be needed for Mac setup.
         deactivate
         workon ipv6map
 
-7. Create a Postgres database::
+7. Create a MySQL database::
 
-        createdb -E UTF-8 ipv6map
+        mysql -e "CREATE DATABASE ipv6map CHARACTER SET UTF8;"
 
    If required, you should update your local settings to reflect your database
    name, username, and password.

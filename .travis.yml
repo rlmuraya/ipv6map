@@ -5,8 +5,8 @@ sudo: false
 python:
   - "3.5"
 
-addons:
-  postgresql: "9.4"
+services:
+  - mysql
 
 cache:
   directories:
@@ -14,14 +14,14 @@ cache:
     - "$HOME/.cache/venvs"
 
 env:
-  - DJANGO_SETTINGS_MODULE="ipv6map.settings.test"
+  - DJANGO_SETTINGS_MODULE="ipv6map.settings.test" DB_USER="travis"
 
 install:
   - pip install -U pip
   - pip install -U -r requirements.txt
 
 before_script:
-  - createdb -E UTF-8 ipv6map -U postgres -O $USER
+  - mysql -e "CREATE DATABASE ipv6map CHARACTER SET UTF8;"
 
 script:
   - pipconflictchecker
