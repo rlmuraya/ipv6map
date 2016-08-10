@@ -136,3 +136,8 @@ USE_TZ = True
 WSGI_APPLICATION = 'ipv6map.wsgi.application'
 
 X_FRAME_OPTIONS = 'DENY'
+
+# === Project-specific settings. === #
+
+# Where geodata will be downloaded to locally.
+GEODATA_DIR = os.path.join(PROJECT_ROOT, 'geodata')

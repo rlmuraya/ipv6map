@@ -6,5 +6,6 @@
 /.coverage
 /ipv6map/settings/local.py
 
+/geodata/
 /htmlcov/
 /public/
