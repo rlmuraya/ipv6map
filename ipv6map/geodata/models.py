@@ -32,6 +32,12 @@ class Version(models.Model):
             self.publish_date.strftime('%Y-%m-%d'),
             "active" if self.is_active else "inactive")
 
+    def activate(self):
+        """Set this version to the current, active version."""
+        self.is_active = True
+        self.save()
+        Version.objects.exclude(pk=self.pk).update(is_active=False)
+
 
 class Location(models.Model):
     """Represent the IPV6 address density at a geographical location."""
