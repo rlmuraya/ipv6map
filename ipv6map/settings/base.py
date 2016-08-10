@@ -15,8 +15,11 @@ ADMINS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ipv6map',
+        'NAME': os.environ.get('DB_NAME', 'ipv6map'),
+        'HOST': os.environ.get('DB_HOST', ''),
+        'PORT': os.environ.get('DB_PORT', 3306),
         'USER': os.environ.get('DB_USER', ''),
+        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
     },
 }
 
