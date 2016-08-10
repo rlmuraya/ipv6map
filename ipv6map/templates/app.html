@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra-styles %}
+  <link type="text/css" rel="stylesheet"
+        href="{% static "libs/leaflet/dist/leaflet.css" %}" />
+  <link type="text/css" rel="stylesheet"
+        href="{% static "libs/leaflet-fullscreen/dist/leaflet.fullscreen.css" %}" />
+  <link type="text/css" rel="stylesheet"
+        href="{% static "css/ipv6map.css" %}" />
+{% endblock extra-styles %}
+
+{% block extra-scripts %}
+  <script src="{% static "libs/leaflet/dist/leaflet.js" %}"></script>
+  <script src="{% static "libs/leaflet-fullscreen/dist/Leaflet.fullscreen.min.js" %}"></script>
+  <script src="{% static "js/ipv6map.js" %}"></script>
+{% endblock extra-scripts %}
+
+{% block content %}
+  <div id="map" data-geodata-url="{% url 'geodata:api-location-list' %}"></div>
+{% endblock content %}
