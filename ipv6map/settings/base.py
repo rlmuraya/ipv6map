@@ -104,6 +104,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+    ('libs', os.path.join(PROJECT_ROOT, 'node_modules')),
 )
 
 TEMPLATES = [

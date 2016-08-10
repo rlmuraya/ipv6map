@@ -1,0 +1,16 @@
+{
+  "name": "ipv6map",
+  "version": "0.0.0",
+  "description": "Visualizing IPv6 addresses around the world",
+  "engines": {
+    "node": ">=4.2 <4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rlmuraya/ipv6map.git"
+  },
+  "author": "Rebecca Muraya",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+  }
+}
