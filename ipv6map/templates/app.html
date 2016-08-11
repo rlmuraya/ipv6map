@@ -19,14 +19,13 @@
 {% endblock extra-scripts %}
 
 {% block content %}
-  <div id="map" data-geodata-url="{% url 'geodata:api-location-list' %}"></div>
-
   <div id="info">
     <div class="container">
       <h1>Visualizing IPv6 address locations around the world.</h1>
 
       <p>
-        <span id="version"></span>
+        <span id="version">Loading data...</span>
+        <br>
         Project source available on
         <a href="https://github.com/rlmuraya/ipv6map/">GitHub</a>.
         <br>
@@ -35,4 +34,8 @@
       </p>
     </div>
   </div>
+
+  <div id="map" data-geodata-url="{% url 'geodata:api-location-list' %}"></div>
+
+  <div id="loading">Loading data...</div>
 {% endblock content %}

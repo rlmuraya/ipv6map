@@ -31,7 +31,7 @@ $(function() {
 
       /* Display when this data was last updated. */
       var version = new Date(data['version']);
-      $("#version").html("Data retrieved on " + version.toDateString() + ".<br>");
+      $("#version").html("Data retrieved on " + version.toDateString() + ".");
 
     }).fail(function(xhr, status, error) {
       /* Display error information in the info strip. */
@@ -40,6 +40,9 @@ $(function() {
       info.find("p").html(
         "An error occurred while retrieving the data:<br>" +
         xhr.status + " - " + (xhr.responseJSON ? xhr.responseJSON.error : error));
+    }).always(function() {
+      /* Remove the loading screen. */
+      $("#loading").hide();
     });
   }
 

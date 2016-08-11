@@ -3,6 +3,21 @@ html, body, #map {
   width: 100%;
 }
 
+#loading {
+  background-color: gray;
+  color: white;
+  font-size: 18px;
+  height: 100%;
+  left: 0;
+  opacity: 0.85;
+  padding-top: 20%;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
 #info {
   background-color: #407cc9;  /* blue */
   bottom: 0;
@@ -15,10 +30,11 @@ html, body, #map {
   position: absolute;
   text-align: center;
   width: 100%;
+  z-index: 1002;
 }
 
 #info.error {
-  background-color: #c9407c;
+  background-color: #c9407c;  /* pink */
 }
 
 #info h1 {
