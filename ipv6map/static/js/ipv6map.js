@@ -5,7 +5,7 @@ $(function() {
     /* Basic map configuration. */
     map = L.map(container, {
       fullscreenControl: {
-        position: "bottomleft"
+        position: "topright"
       }
     });
     map.setView(center, zoom);

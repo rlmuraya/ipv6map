@@ -22,7 +22,7 @@ html, body, #map {
   background-color: #407cc9;  /* blue */
   bottom: 0;
   color: #fff;
-  height: 90px;  /* total height = 90px + 30px padding */
+  height: 90px;
   left: 0;
   line-height: 1.15;
   overflow-y: scroll;
@@ -53,8 +53,4 @@ html, body, #map {
 
 #version {
   font-weight: bold;
-}
-
-.leaflet-container:not(.leaflet-fullscreen-on) .leaflet-control.leaflet-control-fullscreen {
-  margin-bottom: 130px;  /* clear height of info strip by 10px */
 }
