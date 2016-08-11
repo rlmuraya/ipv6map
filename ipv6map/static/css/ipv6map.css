@@ -22,7 +22,7 @@ html, body, #map {
   background-color: #407cc9;  /* blue */
   bottom: 0;
   color: #fff;
-  height: 90px;
+  height: 110px;
   left: 0;
   line-height: 1.15;
   overflow-y: scroll;
@@ -48,7 +48,7 @@ html, body, #map {
 }
 
 #info p {
-  margin: 0;
+  margin: 0 0 10px;
 }
 
 #version {
