@@ -19,4 +19,18 @@
 
 {% block content %}
   <div id="map" data-geodata-url="{% url 'geodata:api-location-list' %}"></div>
+
+  <div id="info">
+    <div class="container">
+      <h1>Visualizing IPv6 address locations around the world.</h1>
+
+      <p>
+        Project source available on
+        <a href="https://github.com/rlmuraya/ipv6map/">GitHub</a>.
+        <br>
+        This product uses GeoLite2 data created by MaxMind, available from
+        <a href="http://www.maxmind.com">http://www.maxmind.com</a>.
+      </p>
+    </div>
+  </div>
 {% endblock content %}

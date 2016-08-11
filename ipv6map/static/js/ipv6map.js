@@ -1,22 +1,6 @@
 var map;
 
 $(function() {
-  var InfoBox = L.Control.extend({
-    options: {
-      position: "topright"
-    },
-    onAdd: function(map) {
-      this._container = L.DomUtil.create('div', 'info');
-      this.welcome();
-      return this._container;
-    },
-    welcome: function() {
-      var container = $(this._container);
-      container.empty()
-      container.append("<h3>Hello</h3>");
-    }
-  });
-
   var initializeMap = function(container, center, zoom) {
     /* Basic map configuration. */
     map = L.map(container, {
@@ -35,9 +19,6 @@ $(function() {
       }
     ));
 
-    /* Configure info box. */
-    map.info = new InfoBox()
-    map.addControl(map.info);
   }
 
   var getGeodata = function(url) {

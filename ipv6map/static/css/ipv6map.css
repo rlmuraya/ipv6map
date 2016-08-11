@@ -1,22 +1,36 @@
-body, html {
+html, body, #map {
   height: 100%;
   width: 100%;
 }
 
-#map {
-  width: 100%;
-  height: 100%;
-}
-
-.leaflet-control.info {
-  background-color: #fff;
-  border: 2px solid black;
-  min-height: 112px;
-  max-height: 25%;
-  width: 225px;
-}
-
-.leaflet-control.info h3 {
-  font-size: 1.5em;
+#info {
+  background-color: #407cc9;  /* blue */
+  bottom: 0;
+  color: #fff;
+  height: 90px;  /* total height = 90px + 30px padding */
+  left: 0;
+  line-height: 1.15;
+  overflow-y: scroll;
+  padding: 15px 0;
+  position: absolute;
   text-align: center;
+  width: 100%;
+}
+
+#info h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#info a {
+  color: #40c98d;  /* green */
+}
+
+#info p {
+  margin: 0;
+}
+
+.leaflet-container:not(.leaflet-fullscreen-on) .leaflet-control.leaflet-control-fullscreen {
+  margin-bottom: 130px;  /* clear height of info strip by 10px */
 }
