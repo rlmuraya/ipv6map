@@ -2,8 +2,11 @@
 
 # ipv6map
 
-Project to create an interactive heatmap to visualize all IPv6 addresses in
-the world.
+An interactive heatmap visualizing IPv6 addresses around the world. A demo of
+the project is available at [rlmuraya.pythonanywhere.com](http://rlmuraya.pythonanywhere.com).
+
+This product includes GeoLite2 data created by MaxMind, available from
+[http://www.maxmind.com](http://www.maxmind.com).
 
 ## Getting started
 
