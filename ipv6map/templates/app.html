@@ -8,12 +8,15 @@
   <link type="text/css" rel="stylesheet"
         href="{% static "libs/leaflet-fullscreen/dist/leaflet.fullscreen.css" %}" />
   <link type="text/css" rel="stylesheet"
+        href="{% static "libs/leaflet.zoomdisplay/dist/leaflet.zoomdisplay.css" %}" />
+  <link type="text/css" rel="stylesheet"
         href="{% static "css/ipv6map.css" %}" />
 {% endblock extra-styles %}
 
 {% block extra-scripts %}
   <script src="{% static "libs/leaflet/dist/leaflet.js" %}"></script>
   <script src="{% static "libs/leaflet-fullscreen/dist/Leaflet.fullscreen.min.js" %}"></script>
+  <script src="{% static "libs/leaflet.zoomdisplay/dist/leaflet.zoomdisplay.js" %}"></script>
   <script src="{% static "libs/leaflet.heat/dist/leaflet-heat.js" %}"></script>
   <script src="{% static "js/ipv6map.js" %}"></script>
 {% endblock extra-scripts %}
