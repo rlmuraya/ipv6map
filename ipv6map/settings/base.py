@@ -101,6 +101,10 @@ ROOT_URLCONF = 'ipv6map.urls'
 
 SESSION_COOKIE_HTTPONLY = True
 
+SILENCED_SYSTEM_CHECKS = [
+    '1_10.W001',  # MIDDLEWARE_CLASSES -> MIDDLEWARE
+]
+
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'public', 'static')
 
 STATIC_URL = '/static/'

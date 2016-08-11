@@ -25,6 +25,7 @@ before_script:
 
 script:
   - pipconflictchecker
+  - python manage.py check
   - python manage.py makemigrations --dry-run --check
   - coverage run manage.py test
   - coverage report
