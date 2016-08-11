@@ -17,6 +17,10 @@ html, body, #map {
   width: 100%;
 }
 
+#info.error {
+  background-color: #c9407c;
+}
+
 #info h1 {
   font-size: 18px;
   font-weight: bold;
@@ -29,6 +33,10 @@ html, body, #map {
 
 #info p {
   margin: 0;
+}
+
+#version {
+  font-weight: bold;
 }
 
 .leaflet-container:not(.leaflet-fullscreen-on) .leaflet-control.leaflet-control-fullscreen {

@@ -14,6 +14,7 @@
 {% block extra-scripts %}
   <script src="{% static "libs/leaflet/dist/leaflet.js" %}"></script>
   <script src="{% static "libs/leaflet-fullscreen/dist/Leaflet.fullscreen.min.js" %}"></script>
+  <script src="{% static "libs/leaflet.heat/dist/leaflet-heat.js" %}"></script>
   <script src="{% static "js/ipv6map.js" %}"></script>
 {% endblock extra-scripts %}
 
@@ -25,6 +26,7 @@
       <h1>Visualizing IPv6 address locations around the world.</h1>
 
       <p>
+        <span id="version"></span>
         Project source available on
         <a href="https://github.com/rlmuraya/ipv6map/">GitHub</a>.
         <br>
