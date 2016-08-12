@@ -2,8 +2,8 @@ var map;
 
 $(function() {
   /* Basic map configuration. */
-  var initializeMap = function(container, center, zoom) {
-    map = L.map(container[0], {
+  var initializeMap = function(center, zoom) {
+    map = L.map('map', {
       center: center,
       zoom: zoom,
       fullscreenControl: {
@@ -22,13 +22,25 @@ $(function() {
     ));
 
     /* Configure the heatmap layer. */
-    map.heat = L.heatLayer([], {radius: 9});
+    map.heat = L.heatLayer([], {});
     map.addControl(map.heat);
+
+    $('#heat-options input').on('change', updateHeatOptions).change();
+  };
+
+  /* Allow the user to set heat map options via form input. */
+  var updateHeatOptions = function() {
+    var options = {};
+    $('#heat-options input').each(function(i, item) {
+      var option = $(item);
+      options[option.attr('name')] = parseFloat(option.val());
+    });
+    map.heat.setOptions(options);
   }
 
   /* Retrieve geojson data & display on the map. */
   var getGeodata = function(url) {
-    $.getJSON(url).done(function(data) {
+    $.getJSON($('#map').data('geodataUrl')).done(function(data) {
       /* Add the locations data to the map. */
       map.heat.setLatLngs(data.locations);
 
@@ -49,21 +61,6 @@ $(function() {
     });
   }
 
-  /* Allow user to adjust heat map radius. */
-  $('#increase-radius').click(function(e) {
-    e.preventDefault();
-    map.heat.setOptions({radius: Math.min(map.heat.options.radius + 1, 25)});
-  });
-  $('#reset-radius').click(function(e) {
-    e.preventDefault();
-    map.heat.setOptions({radius: 9});
-  });
-  $('#decrease-radius').click(function(e) {
-    e.preventDefault();
-    map.heat.setOptions({radius: Math.max(map.heat.options.radius - 1, 1)});
-  });
-
-  var container = $('#map');
-  initializeMap(container, [31.765537, -87.451171], 6);
-  getGeodata(container.data('geodataUrl'));
+  initializeMap([31.765537, -87.451171], 7);
+  getGeodata();
 });

@@ -22,7 +22,7 @@ html, body, #map {
   background-color: #407cc9;  /* blue */
   bottom: 0;
   color: #fff;
-  height: 110px;
+  height: 130px;
   left: 0;
   line-height: 1.15;
   overflow-y: scroll;
@@ -32,27 +32,44 @@ html, body, #map {
   width: 100%;
   z-index: 1002;
 }
-
 #info.error {
   background-color: #c9407c;  /* pink */
 }
-
 #info h1 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-
 #info a {
   color: #40c98d;  /* green */
 }
-
 #info p {
   margin: 0 0 10px;
 }
-
 #info p:last-child {
   margin: 0;
+}
+
+#heat-options {
+  margin: 15px 0 -1.5rem;
+}
+#heat-options .option {
+  display: inline-block;
+}
+#heat-options .option.hidden {
+  display: none;
+}
+#heat-options label {
+  display: inline;
+  white-space: nowrap;
+}
+#heat-options input {
+  color: #407cc9;
+  display: inline;
+  height: 23px;
+  margin-right: 10px;
+  padding: 2px 8px;
+  width: 60px;
 }
 
 #version {
