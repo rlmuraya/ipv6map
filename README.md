@@ -10,8 +10,9 @@ This product includes GeoLite2 data created by MaxMind, available from
 
 ## Getting started
 
-* [Local developer setup](docs/developers/setup.md)
-* [Retrieving IPv6 data](docs/developers/data.md)
+* [Local developer setup](docs/setup.md)
+* [Retrieving IPv6 data](docs/data.md)
+* [Location/Density API](docs/api.md)
 
 [travis]: https://travis-ci.org/rlmuraya/ipv6map
 [master-build-image]: https://api.travis-ci.org/rlmuraya/ipv6map.png?branch=master
