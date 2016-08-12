@@ -25,22 +25,32 @@ $(function() {
     map.heat = L.heatLayer([], {});
     map.addControl(map.heat);
 
-    $('#heat-options input').on('change', updateHeatOptions).change();
+    /* Ensure that changes are picked up when the user changes map options. */
+    $('.heat-option input').on('change', updateHeatOptions).change();
+    $('input[name="clusters"]').on('change', updateClusters).change();
   };
 
   /* Allow the user to set heat map options via form input. */
   var updateHeatOptions = function() {
     var options = {};
-    $('#heat-options input').each(function(i, item) {
+    $('.heat-option input').each(function(i, item) {
       var option = $(item);
       options[option.attr('name')] = parseFloat(option.val());
     });
     map.heat.setOptions(options);
   }
 
+  /* Changing the cluser count will make another backend call for data. */
+  var updateClusters = function() {
+    $('#loading').show();
+    getGeodata($(this).val());
+  }
+
   /* Retrieve geojson data & display on the map. */
-  var getGeodata = function(url) {
-    $.getJSON($('#map').data('geodataUrl')).done(function(data) {
+  var getGeodata = function(clusters) {
+    $.getJSON($('#map').data('geodataUrl'), {
+      'clusters': clusters
+    }).done(function(data) {
       /* Add the locations data to the map. */
       map.heat.setLatLngs(data.locations);
 
@@ -62,5 +72,4 @@ $(function() {
   }
 
   initializeMap([31.765537, -87.451171], 7);
-  getGeodata();
 });

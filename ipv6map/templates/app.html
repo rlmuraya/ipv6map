@@ -36,31 +36,36 @@
         <a href="http://www.maxmind.com">http://www.maxmind.com</a>.
       </p>
 
-      <form id="heat-options">
-        <div class="option">
+      <form id="options">
+        <div class="option heat-option">
           <label for="radius">Radius:</label>
           <input type="number" name="radius" value="9"
                   min="1" max="25" step="1" />
         </div>
-        <div class="option">
+        <div class="option heat-option">
           <label for="blur">Blur:</label>
           <input type="number" name="blur" value="18"
                  min="0" max="50" step="1" />
         </div>
-        <div class="option hidden">
+        <div class="option heat-option hidden">
           <label for="minOpacity">Min Opacity:</label>
           <input type="number" name="minOpacity" value="0.05"
                  min="0" max="1" step="0.05" />
         </div>
-        <div class="option hidden">
+        <div class="option heat-option hidden">
           <label for="max">Max:</label>
           <input type="number" name="max" value="1.0"
                  min="0" max="1" step="0.1" />
         </div>
-        <div class="option hidden">
-          <label for="maxZoom" >Max Zoom:</label>
+        <div class="option heat-option hidden">
+          <label for="maxZoom">Max Zoom:</label>
           <input type="number" name="maxZoom" value="5"
                  min="2" max="19" step="1" />
+        </div>
+        <div class="option data-option">
+          <label for="clusters">Clusters:</label>
+          <input type="number" name="clusters" value="0"
+                 min="0" max="10000" step="500" />
         </div>
       </form>
     </div>

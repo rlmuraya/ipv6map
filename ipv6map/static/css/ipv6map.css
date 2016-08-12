@@ -50,26 +50,29 @@ html, body, #map {
   margin: 0;
 }
 
-#heat-options {
+#options {
   margin: 15px 0 -1.5rem;
 }
-#heat-options .option {
+.option {
   display: inline-block;
 }
-#heat-options .option.hidden {
+.option.hidden {
   display: none;
 }
-#heat-options label {
+.option label {
   display: inline;
   white-space: nowrap;
 }
-#heat-options input {
+.option input {
   color: #407cc9;
   display: inline;
   height: 23px;
   margin-right: 10px;
   padding: 2px 8px;
   width: 60px;
+}
+.data-option input {
+  width: 100px;
 }
 
 #version {

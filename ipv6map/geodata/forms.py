@@ -9,7 +9,7 @@ class LocationFilter(forms.Form):
     east = forms.DecimalField(required=False, min_value=-90, max_value=90)
     west = forms.DecimalField(required=False, min_value=-90, max_value=90)
 
-    clusters = forms.IntegerField(required=False, min_value=1, max_value=1000)
+    clusters = forms.IntegerField(required=False, min_value=0, max_value=30000)
 
     def get_filters(self):
         """Transform boundaries into filters to be used with a Location query."""

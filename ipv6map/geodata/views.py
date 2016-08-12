@@ -44,7 +44,7 @@ class LocationListAPI(View):
         locations = [(float(lat), float(lng), int(n)) for lat, lng, n in locations]
 
         num_clusters = form.cleaned_data.get('clusters')
-        if num_clusters is not None:
+        if num_clusters:
             # Group lat/lng values into geographical groups.
             df = pd.DataFrame(locations, columns=['lat', 'lng', 'density'])
             coordinates, indices = kmeans2(df[['lat', 'lng']], num_clusters)
