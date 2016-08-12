@@ -10,7 +10,7 @@
     "url": "git@github.com:rlmuraya/ipv6map.git"
   },
   "author": "Rebecca Muraya",
-  "license": "BSD-3-Clause",
+  "license": "Unlicense",
   "dependencies": {
     "getskeleton": "2.0.4",
     "jquery": "3.1.0",
