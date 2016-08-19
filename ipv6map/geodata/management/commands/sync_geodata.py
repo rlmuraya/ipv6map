@@ -23,7 +23,7 @@ class Command(BaseCommand):
         r'^GeoLite2-City-CSV_(?P<year>\d{4})(?P<month>\d{2})(?P<day>\d{2})$')
 
     def add_arguments(self, parser):
-        # Normally we skip loading data forit has already been loaded.
+        # Normally we skip loading data that has already been loaded.
         parser.add_argument(
             '--force-create',
             action='store_true',
