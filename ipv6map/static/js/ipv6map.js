@@ -40,7 +40,7 @@ $(function() {
     map.heat.setOptions(options);
   }
 
-  /* Changing the cluser count will make another backend call for data. */
+  /* Changing the cluster count will make another backend call for data. */
   var updateClusters = function() {
     $('#loading').show();
     getGeodata($(this).val());
