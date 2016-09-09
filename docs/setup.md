@@ -13,6 +13,7 @@ may be needed for Mac setup.
     * virtualenv
     * virtualenvwrapper
     * git
+    * npm
 
 2. Clone the repo:
 
@@ -64,6 +65,10 @@ may be needed for Mac setup.
 9. See the docs for [syncing data](data.md) to get the latest IPv6 data from
    GeoLite2.
 
-10. Run the development server and navigate to [localhost:8000](http://localhost:8000):
+10. Install npm packages:
+
+        npm install
+
+11. Run the development server and navigate to [localhost:8000](http://localhost:8000):
 
         python manage.py runserver
