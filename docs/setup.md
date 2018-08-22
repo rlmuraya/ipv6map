@@ -24,7 +24,7 @@ may be needed for Mac setup.
 
         mkvirtualenv ipv6map --python=/usr/bin/python3.5
         workon ipv6map
-        pip install -r requirements/local.txt
+        pip install -r requirements.txt
 
 4. Create a local settings file from the example template:
 
