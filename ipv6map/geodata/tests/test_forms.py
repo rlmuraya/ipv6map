@@ -12,27 +12,27 @@ class TestLocationFilter(TestCase):
 
     def test_minimum(self):
         """All fields ensure that their value is above -90."""
-        data = {d: -100 for d in ('north', 'south', 'east', 'west')}
+        data = {d: -200 for d in ('north', 'south', 'east', 'west')}
         form = forms.LocationFilter(data=data)
         self.assertFalse(form.is_valid())
         self.assertDictEqual(dict(form.errors), {
             'north': ['Ensure this value is greater than or equal to -90.'],
             'south': ['Ensure this value is greater than or equal to -90.'],
-            'east': ['Ensure this value is greater than or equal to -90.'],
-            'west': ['Ensure this value is greater than or equal to -90.'],
+            'east': ['Ensure this value is greater than or equal to -180.'],
+            'west': ['Ensure this value is greater than or equal to -180.'],
         })
         self.assertIsNone(form.get_filters())
 
     def test_maximium(self):
         """All fields ensure that their value is less than 90."""
-        data = {d: 100 for d in ('north', 'south', 'east', 'west')}
+        data = {d: 200 for d in ('north', 'south', 'east', 'west')}
         form = forms.LocationFilter(data=data)
         self.assertFalse(form.is_valid())
         self.assertDictEqual(dict(form.errors), {
             'north': ['Ensure this value is less than or equal to 90.'],
             'south': ['Ensure this value is less than or equal to 90.'],
-            'east': ['Ensure this value is less than or equal to 90.'],
-            'west': ['Ensure this value is less than or equal to 90.'],
+            'east': ['Ensure this value is less than or equal to 180.'],
+            'west': ['Ensure this value is less than or equal to 180.'],
         })
         self.assertIsNone(form.get_filters())
 

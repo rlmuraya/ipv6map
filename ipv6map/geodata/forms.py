@@ -6,8 +6,8 @@ class LocationFilter(forms.Form):
 
     north = forms.DecimalField(required=False, min_value=-90, max_value=90)
     south = forms.DecimalField(required=False, min_value=-90, max_value=90)
-    east = forms.DecimalField(required=False, min_value=-90, max_value=90)
-    west = forms.DecimalField(required=False, min_value=-90, max_value=90)
+    east = forms.DecimalField(required=False, min_value=-180, max_value=180)
+    west = forms.DecimalField(required=False, min_value=-180, max_value=180)
 
     clusters = forms.IntegerField(required=False, min_value=0, max_value=30000)
 
